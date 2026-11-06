@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>club de tennis sayada</title>
+  </head>
+  <body>
+    <header>
+      <h1>bonjour dans le site de club tennis sayada</h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="À propos.html">À propos</a>
+        <a href="service.html">services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <hr />
+    <section>
+      <h2>Formulaire de votre informations</h2>
+      <form>
+        <label for="nom">Nom complet :</label><br />
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          placeholder="Saisissez votre nom"
+          required
+        /><br /><br />
+        <label for="email">Adresse Email :</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="club tennis sayada@mail.com"
+          required
+        /><br /><br />
+        <label for="pass">cin :</label><br />
+        <input type="password" id="pass" name="pass" /><br /><br />
+        <label for="age">Âge :</label><br />
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="18"
+          max="99"
+        /><br /><br />
+        <label for="date">Date :</label><br />
+        <input type="date" id="date name=date" /><br /><br />
+        <label for="">quelle est la duree de l'abonnement?</label>
+        <select id="abonnement" name="abonnement">
+          <option value="1 mois">1 mois</option>
+          <option value="6 mois">6 mois</option>
+          <option value="1 annee">1 annee</option>
+        </select>
+        <input type="radio" id="homme" name="sexe" value="homme" />
+        <label for="homme">Homme</label>
+        <input type="radio" id="femme" name="sexe" value="femme" />
+        <label for="femme">Femme</label><br /><br />
+        <label for="message">Votre message :</label><br />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Écrivez votre message "
+        ></textarea
+        ><br /><br />
+      </form>
+    </section>
+  </body>
+  <footer>
+    <h1>
+      club tennis 2026-2027
+      <img src="images/photo.jpg" alt="image de club" />
+    </h1>
+  </footer>
+</html>
