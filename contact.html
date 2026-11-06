@@ -1,42 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>notre information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous / Inscrivez-vous</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <nav>
-      <a href="index.html">Accueil</a>
+
+    <header class="entete">
+        <h1>Contactez-nous / Inscrivez-vous</h1>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="produits.html">Produits</a>
+        <a href="contact.html">Contact / Inscription</a>
     </nav>
-    <h1>notre numero de telephone</h1>
-    <br />
-    <p>69548721</p>
-    <h1>notre email</h1>
-    <p>clubtennissayada@gmail.com</p>
-    <br /><br /><br />
-    <hr />
-    <hr />
-    <label for="message">Votre message :</label><br />
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Écrivez votre message "
-    ></textarea>
-    <hr />
-    <hr />
-    <h1>numero d'entraineurs</h1>
-    <ul>
-      <li>682651959</li>
-      <li>125614687</li>
-      <li>651615113</li>
-    </ul>
-    <h1>noms d'entaineurs</h1>
-    <ol>
-      <li>coach monir</li>
-      <li>coach absi</li>
-      <li>coach lamine</li>
-    </ol>
+
+    <main>
+        <form action="#" method="post">
+>
+            <fieldset>
+                <legend>1 - Vos coordonnées</legend>
+
+                <div>
+                    <label for="nom">Nom* :</label>
+                    <input type="text" id="nom" name="nom" required autofocus maxlength="50" placeholder="Votre nom">
+                </div>
+
+                <div>
+                    <label for="prenom">Prénom* :</label>
+                    <input type="text" id="prenom" name="prenom" required maxlength="50" placeholder="Votre prénom">
+                </div>
+
+                <div>
+                    <label for="date_naissance">Date de naissance :</label>
+                    <input type="date" id="date_naissance" name="date_naissance">
+                </div>
+
+                <div>
+                    <label for="email">Adresse email* :</label>
+                    <input type="email" id="email" name="email" required placeholder="exemple@email.com">
+                </div>
+
+                <div>
+                    <label for="site_web">Site web :</label>
+                    <input type="url" id="site_web" name="site_web" value="http://www.loc" placeholder="https://monsite.com">
+                </div>
+
+                <div>
+                    <label for="code_secret">Code secret :</label>
+                    <input type="password" id="code_secret" name="code_secret" minlength="6" maxlength="20">
+                </div>
+
+                <div>
+                    <label>Genre :</label>
+                    <input type="radio" id="homme" name="genre" value="Homme" checked>
+                    <label for="homme">Homme</label>
+                    
+                    <input type="radio" id="femme" name="genre" value="Femme">
+                    <label for="femme">Femme</label>
+                </div>
+
+                <div>
+                    <label for="pays">Pays :</label>
+                    <select id="pays" name="pays">
+                        <option value="Tunisie">Tunisie</option>
+                        <option value="France">France</option>
+                        <option value="Algerie">Algérie</option>
+                        <option value="Maroc">Maroc</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{8}" placeholder="12345678">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>2 - Informations complémentaires</legend>
+
+                <div>
+                    <label for="adresse">Adresse postale :</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Votre adresse">
+                </div>
+
+                <div>
+                    <label for="code_postal">Code postal :</label>
+                    <input type="text" id="code_postal" name="code_postal" value="1000" maxlength="4">
+                </div>
+
+                <div>
+                    <label for="semestre">Semestre :</label>
+                    <select id="semestre" name="semestre">
+                        <option value="S1">S1</option>
+                        <option value="S2">S2</option>
+                        <option value="S3">S3</option>
+                        <option value="S4">S4</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="region">Région préférée :</label>
+                    <select id="region" name="region">
+                        <option value="Tunis">Tunis</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Sfax">Sfax</option>
+                        <option value="Djerba">Djerba</option>
+                        <option value="Tozeur">Tozeur</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>3 - Goûts et centres d'intérêt</legend>
+
+                <div>
+                    <label>Centres d'intérêt :</label><br>
+                    <input type="checkbox" id="culture" name="interets[]" value="Culture" checked>
+                    <label for="culture">Culture</label>
+                    
+                    <input type="checkbox" id="gastronomie" name="interets[]" value="Gastronomie">
+                    <label for="gastronomie">Gastronomie</label>
+                    
+                    <input type="checkbox" id="plage" name="interets[]" value="Plage">
+                    <label for="plage">Plage</label>
+                    
+                    <input type="checkbox" id="desert" name="interets[]" value="Désert">
+                    <label for="desert">Désert</label>
+                    
+                    <input type="checkbox" id="histoire" name="interets[]" value="Histoire">
+                    <label for="histoire">Histoire</label>
+                </div>
+
+                <div>
+                    <label for="niveau_html">Niveau en HTML :</label>
+                    <input type="range" id="niveau_html" name="niveau_html" min="0" max="100" step="10">
+                </div>
+
+                <div>
+                    <label for="satisfaction">Note de satisfaction :</label>
+                    <input type="number" id="satisfaction" name="satisfaction" min="1" max="10" step="1">
+                </div>
+
+                <div>
+                    <label for="message">Message / Commentaire :</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>4 - Photo</legend>
+
+                <div>
+                    <label for="photo">Photo de profil :</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+            </fieldset>
+
+            <div class="boutons-form">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+            </div>
+
+        </form>
+
+        <p><a href="index.html">&lt;&lt; Retour à l'accueil</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mon Mini-Projet - Tous droits réservés.</p>
+    </footer>
   </body>
-</html>
+</html>"
+
