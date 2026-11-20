@@ -1,0 +1,73 @@
+body {
+    font-family: Georgia, sans-serif; 
+    color: #333333;                   
+    background-color: #f4f6f8;       
+    margin: 0;
+}
+h1 {
+    color: #24527a;
+    font-size: 2.5em;      
+    text-align: center;     
+}
+
+h2, h3 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #173a56;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;      
+}
+section {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;   
+    padding: 20px;               
+    margin: 15px;                
+}
+.carte-produit {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+/* 4. Conteneur de la liste des cartes (Flexbox) */
+.liste-produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 5. Chaque carte produit individuelle */
+.carte-produit {
+    flex: 1 1 250px;
+    max-width: 320px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* 6. Contrôle des images dans les cartes */
+.carte-produit img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* 7. Adaptation aux petits écrans (Media Query pour mobile/tablette) */
+@media (max-width: 600px) {
+    .liste-produits {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .carte-produit {
+        max-width: 100%;
+    }
+}
